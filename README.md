@@ -23,7 +23,7 @@ resource "terrain_package" "ruby" {
 }
 
 // multiple packages
-resource "terrain_installed_package" "pkgs" {
+resource "terrain_package" "pkgs" {
   count   = "${length(var.pkgs)"
   name    = "${element(var.pkgs, count.index)}"
 }
