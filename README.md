@@ -5,7 +5,7 @@
 ```hcl
 provider "terrain" {
   version         = "~> 0.1"
-  package_manager = "yum"
+  install_command = "yum install -y %s"
 }
 ```
 
@@ -17,7 +17,7 @@ Install packages using package manager.
 
 ```hcl
 // a single package
-resource "terrain_installed_package" "ruby" {
+resource "terrain_package" "ruby" {
   name    = "ruby"
   version = "2.3.0"
 }
